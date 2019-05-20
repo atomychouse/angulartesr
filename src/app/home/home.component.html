@@ -1,0 +1,31 @@
+<h1>He aqui la lista</h1>
+
+<p>
+  {{metodo}}
+
+
+</p>
+
+
+<ul>
+
+	<li *ngFor="let h of home">
+		
+		<span (click)="onSelect(h)">{{h.name}}</span>
+		
+	</li>
+</ul>
+
+
+--- {{selectedHome}} ---
+
+<div *ngIf="selectedHome">
+	<h2>{{selectedHome.name | uppercase}} Details</h2>
+	<div><span>id: </span>{{selectedHome.id}}</div>
+	<div>
+	  <label>name:
+	    <input [(ngModel)]="selectedHome.name" placeholder="name"/>
+	  </label>
+	</div>
+
+</div>
